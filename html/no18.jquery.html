@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gerald</title>
+	<link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.min.css">
+<script src="../javascript/jquery12.js"></script>
+<script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<style type="text/css">
+	#dropbox{
+		height: 200px;
+		width: 200px;
+		background-color: yellow;
+	}
+	.border{
+		border:1px solid black;
+	}
+</style>
+
+<script type="text/javascript">
+$(function(){
+$('#name, #city').draggable({cursor:'alias', containment:'document',revert:true, start:function(){
+	contents = $(this).text();
+}})
+
+$('#dropbox').droppable({hoverClass:'border', tolerance: 'touch', accept:'#name', over:function(){
+	$('#dropbox').text("Something is hovering"); }, out: function(){
+		$('#dropbox').text("He got away");
+	}, drop:function(){
+		$('#dropbox').text("");
+		$('#dropbox').append(contents+"<br>");
+	}
+});
+});
+
+</script>
+</head>
+<body>
+<span id="name">gerald</span>
+<span id="name">hero</span>
+<span id="city">Angeles City</span>
+<div id="dropbox"></div>
+</body>
+</html>

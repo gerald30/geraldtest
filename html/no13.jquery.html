@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gerald</title>
+<link rel="stylesheet" type="text/css" href="../css/no13.jquery.css">
+<script src="../javascript/jquery12.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$("#menu li").hover(function(){
+	$(this).children(":hidden").slideDown();
+},function(){
+	$(this).parent().find("ul").slideUp();
+});
+
+});
+</script>
+</head>
+<body>
+<div id="menu">
+<ul>
+	<li><a href="#">Home</a>
+	<ul>
+			<li><a href="#">Submenu1</a></li>
+			<li><a href="#">Submenu2</a></li>
+			<li><a href="#">Submenu3</a></li>
+	</ul></li>
+	<li><a href="#">Info</a><ul>
+			<li><a href="#">Submenu1</a></li>
+			<li><a href="#">Submenu2</a></li>
+			<li><a href="#">Submenu3</a></li>
+		</ul></li>
+	<li><a href="#">Portfolio</a>
+		<ul>
+			<li><a href="#">Submenu1</a></li>
+			<li><a href="#">Submenu2</a></li>
+			<li><a href="#">Submenu3</a></li>
+		</ul></li>
+</ul>
+</div>
+</body>
+</html>

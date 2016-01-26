@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gerald</title>
+	<link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.min.css">
+<script src="../javascript/jquery12.js"></script>
+<script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<style type="text/css"></style>
+
+<script type="text/javascript">
+$(function(){
+	$("#content").accordion({icons:{'header':'ui-icon-plus', "activeHeader": "ui-icon-minus"}, collapsible : true, active: false});
+})
+</script>
+</head>
+
+<body>
+<div id="content">
+	<h3><a href="#">Home</a></h3>
+	<div>This is the homePage!</div>
+	<h3><a href="#">About</a></h3>
+	<div>This is the about Page!</div>
+	<h3><a href="#">Contact</a></h3>
+	<div>This is the contact Page!</div>
+</div>
+</body>
+</html>

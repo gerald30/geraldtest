@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="../javascript/jquery12.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/jquerybetter.css">
+</head>
+<body>
+<div class="container">
+	<div class="jumbotron">
+	<h1>Jquery function</h1>
+	<button class="panel-button" data-panelid="panel1">#btn1</button>
+	<button class="panel-button" data-panelid="panel2">#btn2</button>
+	<button class="panel-button" data-panelid="panel3">#btn3</button>
+	<button class="panel-button" data-panelid="panel4">#btn4</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-3">
+		<div id="panel1" style="display:none" class="panel-primary">
+			<div class="panel-heading">
+			#panel1
+			</div>
+			<div class="panel-body">
+			content
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="col-xs-3">
+		<div id="panel2" style="display:none" class="panel-primary">
+			<div class="panel-heading">
+			#panel2
+			</div>
+			<div class="panel-body">
+			content
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-xs-3">
+		<div id="panel3" style="display:none" class="panel-primary">
+			<div class="panel-heading">
+			#panel3
+			</div>
+			<div class="panel-body">
+			content
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-xs-3">
+		<div id="panel4" style="display:none" class="panel-primary">
+			<div class="panel-heading">
+			#panel4
+			</div>
+			<div class="panel-body">
+			content
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function(){
+var content = "sample of jquery";
+
+    $(".panel-button").click(function(){
+        var panelid = $(this).attr('data-panelid');
+        $('#'+panelid).toggle();
+        $('#'+panelid+' .panel-body').html(content);
+
+    });
+  
+});
+</script>
+
+
+</body>
+</html>

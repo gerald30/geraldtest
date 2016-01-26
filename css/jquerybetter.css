@@ -1,0 +1,23 @@
+div .panel-heading {
+ border: 1px solid red;
+    background-color: yellow;
+    width: 100px;
+    height: 20px;
+    border: 1px solid blue;
+    text-align: center;
+
+}
+div .panel-body {
+ border: 1px solid red;
+    background-color: #ffffe5;
+    width: 100px;
+    height: 20px;
+    border: 1px solid blue;
+    text-align: center;
+}
+div .col-xs-3{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 1em;
+}

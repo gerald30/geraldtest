@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gerald</title>
+	<script type="text/javascript">
+function enter(){
+
+function calculator(){
+
+	this.multiplication = function(val1, val2){
+		return(val1*val2);
+	}
+	this.addition = function(val1, val2){
+		return(val1 + val2);
+	}
+	this.subtraction = function(val1, val2){
+		return(val1-val2);
+	}
+	this.division = function(val1, val2){
+		return(val1/val2);
+	}
+}
+
+var t1 =  document.getElementById("firstdigit").value;
+var t2 =  document.getElementById("seconddigit").value;
+var a =  document.getElementById("add").checked;
+var b =  document.getElementById("sub").checked;
+var c =  document.getElementById("div").checked;
+var d =  document.getElementById("multi").checked;
+
+var calc = new calculator();
+
+
+ if (a == true){
+	document.getElementById("equal").innerHTML = calc.addition(Number(t1),Number(t2));
+}
+else if (d == true){
+	document.getElementById("equal").innerHTML = calc.multiplication(Number(t1),Number(t2));
+}
+else if (c == true){
+	document.getElementById("equal").innerHTML = calc.division(Number(t1),Number(t2));
+}
+ else if (b == true){
+	document.getElementById("equal").innerHTML = calc.subtraction(Number(t1),Number(t2));
+} else { 
+	document.getElementById("equal").innerHTML = "Choose an operator!";
+}
+
+}
+
+</script>
+</head>
+<body>
+<table>
+<tr><td>First digit:</td><td><input type="text" id="firstdigit"></td></tr>
+<tr><td>Select operator :</td><td>
+     <input type="radio" name="coffee" id="add" selected>Addition<br>
+  <input type="radio" name="coffee" id="sub">Subtraction<br>
+    <input type="radio" name="coffee" id="div">Division<br>
+  <input type="radio" name="coffee" id="multi">Multiplication
+  </select></td></tr>
+<tr><td>Second digit:</td><td><input type="text" id="seconddigit"></td></tr>
+<tr><td><button onclick="enter()">submit</button></td><td><p id="equal"></p></td></tr>
+
+
+</table>
+
+
+
+</body>
+</html>
